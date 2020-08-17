@@ -324,8 +324,8 @@ void EnWallmas_Walk(EnWallmas* this, GlobalContext* globalCtx) {
 
     Math_ApproxUpdateScaledS(&this->actor.posRot.rot.y, (s16)((s32)this->actor.yawTowardsLink + 0x8000), 0xB6);
 
-    if ((func_800A56C8(&this->skelAnime, 0.0f) != 0) || (func_800A56C8(&this->skelAnime, 12.0f) != 0) ||
-        (func_800A56C8(&this->skelAnime, 24.0f) != 0) || (func_800A56C8(&this->skelAnime, 36.0f) != 0)) {
+    if ((SkelAnime_PastFrameTest(&this->skelAnime, 0.0f) != 0) || (SkelAnime_PastFrameTest(&this->skelAnime, 12.0f) != 0) ||
+        (SkelAnime_PastFrameTest(&this->skelAnime, 24.0f) != 0) || (SkelAnime_PastFrameTest(&this->skelAnime, 36.0f) != 0)) {
         Audio_PlayActorSound2(&this->actor, NA_SE_EN_FALL_WALK);
     }
 }
@@ -344,7 +344,7 @@ void EnWallmas_ReturnToCeiling(EnWallmas* this, GlobalContext* globalCtx) {
         this->actor.posRot.pos.y = this->actor.posRot.pos.y + 30.0f;
     }
 
-    if (func_800A56C8(&this->skelAnime, 20.0f) != 0) {
+    if (SkelAnime_PastFrameTest(&this->skelAnime, 20.0f) != 0) {
         Audio_PlayActorSound2(&this->actor, NA_SE_EN_FALL_UP);
     }
 
@@ -372,7 +372,7 @@ void EnWallmas_TakeDamage(EnWallmas* this, GlobalContext* globalCtx) {
             EnWallmas_SetupCooldown(this);
         }
     }
-    if (func_800A56C8(&this->skelAnime, 13.0f) != 0) {
+    if (SkelAnime_PastFrameTest(&this->skelAnime, 13.0f) != 0) {
         Audio_PlayActorSound2(&this->actor, NA_SE_EN_DODO_M_GND);
     }
 
@@ -399,7 +399,7 @@ void EnWallmas_TakePlayer(EnWallmas* this, GlobalContext* globalCtx) {
     Player* player;
 
     player = PLAYER;
-    if (func_800A56C8(&this->skelAnime, 1.0f) != 0) {
+    if (SkelAnime_PastFrameTest(&this->skelAnime, 1.0f) != 0) {
         if (LINK_IS_CHILD) {
             func_8002F7DC(&this->actor, NA_SE_VO_LI_DAMAGE_S_KID);
         } else {

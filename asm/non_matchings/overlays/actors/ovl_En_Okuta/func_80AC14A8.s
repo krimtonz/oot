@@ -78,7 +78,7 @@ glabel func_80AC14A8
 .L80AC157C:
 /* 00F1C 80AC157C 4480A000 */  mtc1    $zero, $f20                ## $f20 = 0.00
 /* 00F20 80AC1580 02002025 */  or      $a0, $s0, $zero            ## $a0 = 0000014C
-/* 00F24 80AC1584 0C0295B2 */  jal     func_800A56C8              
+/* 00F24 80AC1584 0C0295B2 */  jal     SkelAnime_FrameTest              
 /* 00F28 80AC1588 3C054170 */  lui     $a1, 0x4170                ## $a1 = 41700000
 /* 00F2C 80AC158C 10400006 */  beq     $v0, $zero, .L80AC15A8     
 /* 00F30 80AC1590 02A02025 */  or      $a0, $s5, $zero            ## $a0 = 00000000

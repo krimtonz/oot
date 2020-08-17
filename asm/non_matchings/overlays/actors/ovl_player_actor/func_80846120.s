@@ -28,7 +28,7 @@ glabel func_80846120
 /* 13F78 80846188 10000031 */  beq     $zero, $zero, .L80846250   
 /* 13F7C 8084618C 8FBF001C */  lw      $ra, 0x001C($sp)           
 .L80846190:
-/* 13F80 80846190 0C02914C */  jal     func_800A4530              
+/* 13F80 80846190 0C02914C */  jal     SkelAnime_PastFrameTestUpdRate              
 /* 13F84 80846194 8FA40020 */  lw      $a0, 0x0020($sp)           
 /* 13F88 80846198 1040000A */  beq     $v0, $zero, .L808461C4     
 /* 13F8C 8084619C 8FA40020 */  lw      $a0, 0x0020($sp)           
@@ -42,7 +42,7 @@ glabel func_80846120
 /* 13FAC 808461BC 10000024 */  beq     $zero, $zero, .L80846250   
 /* 13FB0 808461C0 8FBF001C */  lw      $ra, 0x001C($sp)           
 .L808461C4:
-/* 13FB4 808461C4 0C02914C */  jal     func_800A4530              
+/* 13FB4 808461C4 0C02914C */  jal     SkelAnime_PastFrameTestUpdRate              
 /* 13FB8 808461C8 3C054365 */  lui     $a1, 0x4365                ## $a1 = 43650000
 /* 13FBC 808461CC 1040001C */  beq     $v0, $zero, .L80846240     
 /* 13FC0 808461D0 02002025 */  or      $a0, $s0, $zero            ## $a0 = 00000000

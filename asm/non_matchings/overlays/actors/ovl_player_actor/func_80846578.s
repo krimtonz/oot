@@ -32,7 +32,7 @@ glabel func_80846578
 /* 143DC 808465EC 8FBF0024 */  lw      $ra, 0x0024($sp)           
 .L808465F0:
 /* 143E0 808465F0 8FA4002C */  lw      $a0, 0x002C($sp)           
-/* 143E4 808465F4 0C02914C */  jal     func_800A4530              
+/* 143E4 808465F4 0C02914C */  jal     SkelAnime_PastFrameTestUpdRate              
 /* 143E8 808465F8 3C054040 */  lui     $a1, 0x4040                ## $a1 = 40400000
 /* 143EC 808465FC 1040000A */  beq     $v0, $zero, .L80846628     
 /* 143F0 80846600 3C014100 */  lui     $at, 0x4100                ## $at = 41000000

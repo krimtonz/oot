@@ -424,11 +424,11 @@ glabel func_8084BF1C
 /* 1A2F4 8084C504 1461000B */  bne     $v1, $at, .L8084C534
 /* 1A2F8 8084C508 260401B4 */  addiu   $a0, $s0, 0x01B4           ## $a0 = 000001B4
 /* 1A2FC 8084C50C 3C054160 */  lui     $a1, 0x4160                ## $a1 = 41600000
-/* 1A300 8084C510 0C02914C */  jal     func_800A4530
+/* 1A300 8084C510 0C02914C */  jal     SkelAnime_PastFrameTestUpdRate
 /* 1A304 8084C514 AFA40030 */  sw      $a0, 0x0030($sp)
 /* 1A308 8084C518 1440001A */  bne     $v0, $zero, .L8084C584
 /* 1A30C 8084C51C 8FA40030 */  lw      $a0, 0x0030($sp)
-/* 1A310 8084C520 0C02914C */  jal     func_800A4530
+/* 1A310 8084C520 0C02914C */  jal     SkelAnime_PastFrameTestUpdRate
 /* 1A314 8084C524 3C0541E8 */  lui     $a1, 0x41E8                ## $a1 = 41E80000
 /* 1A318 8084C528 14400016 */  bne     $v0, $zero, .L8084C584
 /* 1A31C 8084C52C 00000000 */  nop
@@ -438,19 +438,19 @@ glabel func_8084BF1C
 /* 1A328 8084C538 1461002A */  bne     $v1, $at, .L8084C5E4
 /* 1A32C 8084C53C 260401B4 */  addiu   $a0, $s0, 0x01B4           ## $a0 = 000001B4
 /* 1A330 8084C540 3C0541B0 */  lui     $a1, 0x41B0                ## $a1 = 41B00000
-/* 1A334 8084C544 0C02914C */  jal     func_800A4530
+/* 1A334 8084C544 0C02914C */  jal     SkelAnime_PastFrameTestUpdRate
 /* 1A338 8084C548 AFA40030 */  sw      $a0, 0x0030($sp)
 /* 1A33C 8084C54C 1440000D */  bne     $v0, $zero, .L8084C584
 /* 1A340 8084C550 8FA40030 */  lw      $a0, 0x0030($sp)
-/* 1A344 8084C554 0C02914C */  jal     func_800A4530
+/* 1A344 8084C554 0C02914C */  jal     SkelAnime_PastFrameTestUpdRate
 /* 1A348 8084C558 3C05420C */  lui     $a1, 0x420C                ## $a1 = 420C0000
 /* 1A34C 8084C55C 14400009 */  bne     $v0, $zero, .L8084C584
 /* 1A350 8084C560 8FA40030 */  lw      $a0, 0x0030($sp)
-/* 1A354 8084C564 0C02914C */  jal     func_800A4530
+/* 1A354 8084C564 0C02914C */  jal     SkelAnime_PastFrameTestUpdRate
 /* 1A358 8084C568 3C054244 */  lui     $a1, 0x4244                ## $a1 = 42440000
 /* 1A35C 8084C56C 14400005 */  bne     $v0, $zero, .L8084C584
 /* 1A360 8084C570 8FA40030 */  lw      $a0, 0x0030($sp)
-/* 1A364 8084C574 0C02914C */  jal     func_800A4530
+/* 1A364 8084C574 0C02914C */  jal     SkelAnime_PastFrameTestUpdRate
 /* 1A368 8084C578 3C05425C */  lui     $a1, 0x425C                ## $a1 = 425C0000
 /* 1A36C 8084C57C 5040001A */  beql    $v0, $zero, .L8084C5E8
 /* 1A370 8084C580 8FBF002C */  lw      $ra, 0x002C($sp)
@@ -476,7 +476,7 @@ glabel func_8084BF1C
 /* 1A3B4 8084C5C4 00000000 */  nop
 /* 1A3B8 8084C5C8 44050000 */  mfc1    $a1, $f0
 .L8084C5CC:
-/* 1A3BC 8084C5CC 0C02914C */  jal     func_800A4530
+/* 1A3BC 8084C5CC 0C02914C */  jal     SkelAnime_PastFrameTestUpdRate
 /* 1A3C0 8084C5D0 00000000 */  nop
 /* 1A3C4 8084C5D4 50400004 */  beql    $v0, $zero, .L8084C5E8
 /* 1A3C8 8084C5D8 8FBF002C */  lw      $ra, 0x002C($sp)

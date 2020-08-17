@@ -588,7 +588,7 @@ void func_80AEBAFC(EnRu1* this) {
 }
 
 void func_80AEBB3C(EnRu1* this) {
-    if (func_800A56C8(&this->skelAnime, 5.0f)) {
+    if (SkelAnime_PastFrameTest(&this->skelAnime, 5.0f)) {
         func_80078914(&this->actor.projectedPos, 0x863);
     }
 }
@@ -596,15 +596,15 @@ void func_80AEBB3C(EnRu1* this) {
 void func_80AEBB78(EnRu1* this) {
     SkelAnime* skelAnime = &this->skelAnime;
 
-    if ((((func_800A56C8(skelAnime, 4.0f)) || (func_800A56C8(skelAnime, 13.0f))) ||
-         (func_800A56C8(skelAnime, 22.0f))) ||
-        (func_800A56C8(skelAnime, 31.0f))) {
+    if ((((SkelAnime_PastFrameTest(skelAnime, 4.0f)) || (SkelAnime_PastFrameTest(skelAnime, 13.0f))) ||
+         (SkelAnime_PastFrameTest(skelAnime, 22.0f))) ||
+        (SkelAnime_PastFrameTest(skelAnime, 31.0f))) {
         func_80078914(&this->actor.projectedPos, 0x839);
     }
 }
 
 void func_80AEBBF4(EnRu1* this) {
-    if (func_800A56C8(&this->skelAnime, 8.0f)) {
+    if (SkelAnime_PastFrameTest(&this->skelAnime, 8.0f)) {
         func_80078914(&this->actor.projectedPos, 0x873);
     }
 }
@@ -860,7 +860,7 @@ s32 func_80AEC5FC(EnRu1* this, GlobalContext* globalCtx) {
 void func_80AEC650(EnRu1* this) {
     s32 pad[2];
     if (this->unk_280 == 0) {
-        if ((func_800A56C8(&this->skelAnime, 2.0f)) || (func_800A56C8(&this->skelAnime, 7.0f))) {
+        if ((SkelAnime_PastFrameTest(&this->skelAnime, 2.0f)) || (SkelAnime_PastFrameTest(&this->skelAnime, 7.0f))) {
             func_80078914(&this->actor.projectedPos, 0x803);
         }
     }
@@ -1845,7 +1845,7 @@ void func_80AEEFEC(EnRu1* this, GlobalContext* globalCtx) {
 }
 
 void func_80AEF080(EnRu1* this) {
-    if (func_800A56C8(&this->skelAnime, 11.0f)) {
+    if (SkelAnime_PastFrameTest(&this->skelAnime, 11.0f)) {
         func_80078914(&this->actor.projectedPos, NA_SE_EV_LAND_DIRT);
     }
 }
@@ -1936,8 +1936,8 @@ void func_80AEF3A8(EnRu1* this, GlobalContext* globalCtx) {
 void func_80AEF40C(EnRu1* this) {
     SkelAnime* skelAnime = &this->skelAnime;
 
-    if ((func_800A56C8(skelAnime, 2.0f)) || (func_800A56C8(skelAnime, 7.0f)) || (func_800A56C8(skelAnime, 12.0f)) ||
-        (func_800A56C8(skelAnime, 18.0f)) || (func_800A56C8(skelAnime, 25.0f)) || (func_800A56C8(skelAnime, 33.0f))) {
+    if ((SkelAnime_PastFrameTest(skelAnime, 2.0f)) || (SkelAnime_PastFrameTest(skelAnime, 7.0f)) || (SkelAnime_PastFrameTest(skelAnime, 12.0f)) ||
+        (SkelAnime_PastFrameTest(skelAnime, 18.0f)) || (SkelAnime_PastFrameTest(skelAnime, 25.0f)) || (SkelAnime_PastFrameTest(skelAnime, 33.0f))) {
         func_80078914(&this->actor.projectedPos, 0x803);
     }
 }
@@ -1947,7 +1947,7 @@ void func_80AEF4A8(EnRu1* this, GlobalContext* globalCtx) {
 }
 
 void func_80AEF4E0(EnRu1* this) {
-    if (func_800A56C8(&this->skelAnime, 5.0f)) {
+    if (SkelAnime_PastFrameTest(&this->skelAnime, 5.0f)) {
         func_80078914(&this->actor.projectedPos, NA_SE_VO_RT_LAUGH_0);
     }
 }

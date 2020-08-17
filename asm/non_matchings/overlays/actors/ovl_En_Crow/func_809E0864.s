@@ -19,7 +19,7 @@ glabel func_809E0864
               
 /* 00648 809E0888 AFAF003C */  sw      $t7, 0x003C($sp)           
 /* 0064C 809E088C 8FA40028 */  lw      $a0, 0x0028($sp)           
-/* 00650 809E0890 0C0295B2 */  jal     func_800A56C8              
+/* 00650 809E0890 0C0295B2 */  jal     SkelAnime_FrameTest              
 /* 00654 809E0894 24050000 */  addiu   $a1, $zero, 0x0000         ## $a1 = 00000000
 /* 00658 809E0898 0C03F66B */  jal     Math_Rand_ZeroOne
               ## Rand.Next() float

@@ -9,7 +9,7 @@ glabel func_80851D80
 /* 1FB8C 80851D9C 0C028EF0 */  jal     func_800A3BC0              
 /* 1FB90 80851DA0 AFA6001C */  sw      $a2, 0x001C($sp)           
 /* 1FB94 80851DA4 8FA4001C */  lw      $a0, 0x001C($sp)           
-/* 1FB98 80851DA8 0C02914C */  jal     func_800A4530              
+/* 1FB98 80851DA8 0C02914C */  jal     SkelAnime_PastFrameTestUpdRate              
 /* 1FB9C 80851DAC 3C0540C0 */  lui     $a1, 0x40C0                ## $a1 = 40C00000
 /* 1FBA0 80851DB0 10400007 */  beq     $v0, $zero, .L80851DD0     
 /* 1FBA4 80851DB4 8FA40024 */  lw      $a0, 0x0024($sp)           

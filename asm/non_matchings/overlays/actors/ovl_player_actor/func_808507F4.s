@@ -163,7 +163,7 @@ glabel func_808507F4
 /* 1E840 80850A50 8FA40020 */  lw      $a0, 0x0020($sp)
 /* 1E844 80850A54 1721001E */  bne     $t9, $at, .L80850AD0
 /* 1E848 80850A58 00000000 */  nop
-/* 1E84C 80850A5C 0C02914C */  jal     func_800A4530
+/* 1E84C 80850A5C 0C02914C */  jal     SkelAnime_PastFrameTestUpdRate
 /* 1E850 80850A60 3C0541F0 */  lui     $a1, 0x41F0                ## $a1 = 41F00000
 /* 1E854 80850A64 1040001A */  beq     $v0, $zero, .L80850AD0
 /* 1E858 80850A68 00000000 */  nop

@@ -59,7 +59,7 @@ glabel func_80AC12D8
 /* 00D30 80AC1390 E6120028 */  swc1    $f18, 0x0028($s0)          ## 00000028
 /* 00D34 80AC1394 8FA40020 */  lw      $a0, 0x0020($sp)           
 .L80AC1398:
-/* 00D38 80AC1398 0C0295B2 */  jal     func_800A56C8              
+/* 00D38 80AC1398 0C0295B2 */  jal     SkelAnime_FrameTest              
 /* 00D3C 80AC139C 3C0540C0 */  lui     $a1, 0x40C0                ## $a1 = 40C00000
 /* 00D40 80AC13A0 10400003 */  beq     $v0, $zero, .L80AC13B0     
 /* 00D44 80AC13A4 02002025 */  or      $a0, $s0, $zero            ## $a0 = 00000000
@@ -74,7 +74,7 @@ glabel func_80AC12D8
 /* 00D64 80AC13C4 00000000 */  nop
 /* 00D68 80AC13C8 45020008 */  bc1fl   .L80AC13EC                 
 /* 00D6C 80AC13CC 3C014248 */  lui     $at, 0x4248                ## $at = 42480000
-/* 00D70 80AC13D0 0C0295B2 */  jal     func_800A56C8              
+/* 00D70 80AC13D0 0C0295B2 */  jal     SkelAnime_FrameTest              
 /* 00D74 80AC13D4 3C054150 */  lui     $a1, 0x4150                ## $a1 = 41500000
 /* 00D78 80AC13D8 10400003 */  beq     $v0, $zero, .L80AC13E8     
 /* 00D7C 80AC13DC 02002025 */  or      $a0, $s0, $zero            ## $a0 = 00000000
@@ -90,7 +90,7 @@ glabel func_80AC12D8
 /* 00D9C 80AC13FC 00000000 */  nop
 /* 00DA0 80AC1400 45020008 */  bc1fl   .L80AC1424                 
 /* 00DA4 80AC1404 3C014320 */  lui     $at, 0x4320                ## $at = 43200000
-/* 00DA8 80AC1408 0C0295B2 */  jal     func_800A56C8              
+/* 00DA8 80AC1408 0C0295B2 */  jal     SkelAnime_FrameTest              
 /* 00DAC 80AC140C 3C054150 */  lui     $a1, 0x4150                ## $a1 = 41500000
 /* 00DB0 80AC1410 10400003 */  beq     $v0, $zero, .L80AC1420     
 /* 00DB4 80AC1414 02002025 */  or      $a0, $s0, $zero            ## $a0 = 00000000

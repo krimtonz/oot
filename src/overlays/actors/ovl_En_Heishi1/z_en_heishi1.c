@@ -159,7 +159,7 @@ void EnHeishi1_Walk(EnHeishi1* this, GlobalContext* globalCtx) {
 
     SkelAnime_FrameUpdateMatrix(&this->skelAnime);
 
-    if (func_800A56C8(&this->skelAnime, 1.0f) || func_800A56C8(&this->skelAnime, 17.0f)) {
+    if (SkelAnime_PastFrameTest(&this->skelAnime, 1.0f) || SkelAnime_PastFrameTest(&this->skelAnime, 17.0f)) {
         Audio_PlayActorSound2(&this->actor, NA_SE_EV_KNIGHT_WALK);
     }
 

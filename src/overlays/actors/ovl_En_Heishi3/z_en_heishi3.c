@@ -170,7 +170,7 @@ void EnHeishi3_CatchStart(EnHeishi3* this, GlobalContext* globalCtx) {
 void func_80A55BD4(EnHeishi3* this, GlobalContext* globalCtx) {
 
     SkelAnime_FrameUpdateMatrix(&this->skelAnime);
-    if ((func_800A56C8(&this->skelAnime, 1.0f) != 0) || (func_800A56C8(&this->skelAnime, 17.0f) != 0)) {
+    if ((SkelAnime_PastFrameTest(&this->skelAnime, 1.0f) != 0) || (SkelAnime_PastFrameTest(&this->skelAnime, 17.0f) != 0)) {
         Audio_PlayActorSound2(&this->actor, NA_SE_EV_KNIGHT_WALK);
     }
     if (this->caughtTimer == 0) {

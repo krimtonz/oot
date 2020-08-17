@@ -24,7 +24,7 @@ glabel func_80852298
 /* 200DC 808522EC 00C02025 */  or      $a0, $a2, $zero            ## $a0 = 00000000
 /* 200E0 808522F0 55E00009 */  bnel    $t7, $zero, .L80852318     
 /* 200E4 808522F4 8FBF001C */  lw      $ra, 0x001C($sp)           
-/* 200E8 808522F8 0C02914C */  jal     func_800A4530              
+/* 200E8 808522F8 0C02914C */  jal     SkelAnime_PastFrameTestUpdRate              
 /* 200EC 808522FC 3C054120 */  lui     $a1, 0x4120                ## $a1 = 41200000
 /* 200F0 80852300 10400004 */  beq     $v0, $zero, .L80852314     
 /* 200F4 80852304 8FA40028 */  lw      $a0, 0x0028($sp)           

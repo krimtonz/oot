@@ -11,7 +11,7 @@ glabel func_80AC11A8
               
 /* 00B6C 80AC11CC AFA4002C */  sw      $a0, 0x002C($sp)           
 /* 00B70 80AC11D0 8FA4002C */  lw      $a0, 0x002C($sp)           
-/* 00B74 80AC11D4 0C0295B2 */  jal     func_800A56C8              
+/* 00B74 80AC11D4 0C0295B2 */  jal     SkelAnime_FrameTest              
 /* 00B78 80AC11D8 24050000 */  addiu   $a1, $zero, 0x0000         ## $a1 = 00000000
 /* 00B7C 80AC11DC 10400005 */  beq     $v0, $zero, .L80AC11F4     
 /* 00B80 80AC11E0 3C053F00 */  lui     $a1, 0x3F00                ## $a1 = 3F000000
@@ -20,7 +20,7 @@ glabel func_80AC11A8
 /* 00B8C 80AC11EC 244EFFFF */  addiu   $t6, $v0, 0xFFFF           ## $t6 = FFFFFFFF
 /* 00B90 80AC11F0 A60E0194 */  sh      $t6, 0x0194($s0)           ## 00000194
 .L80AC11F4:
-/* 00B94 80AC11F4 0C0295B2 */  jal     func_800A56C8              
+/* 00B94 80AC11F4 0C0295B2 */  jal     SkelAnime_FrameTest              
 /* 00B98 80AC11F8 8FA4002C */  lw      $a0, 0x002C($sp)           
 /* 00B9C 80AC11FC 10400003 */  beq     $v0, $zero, .L80AC120C     
 /* 00BA0 80AC1200 02002025 */  or      $a0, $s0, $zero            ## $a0 = 00000000

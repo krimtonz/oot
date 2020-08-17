@@ -22,7 +22,7 @@ glabel func_8084EED8
 /* 1CD18 8084EF28 10000021 */  beq     $zero, $zero, .L8084EFB0   
 /* 1CD1C 8084EF2C 8FBF0024 */  lw      $ra, 0x0024($sp)           
 .L8084EF30:
-/* 1CD20 8084EF30 0C02914C */  jal     func_800A4530              
+/* 1CD20 8084EF30 0C02914C */  jal     SkelAnime_PastFrameTestUpdRate              
 /* 1CD24 8084EF34 3C054214 */  lui     $a1, 0x4214                ## $a1 = 42140000
 /* 1CD28 8084EF38 10400016 */  beq     $v0, $zero, .L8084EF94     
 /* 1CD2C 8084EF3C 8FA40028 */  lw      $a0, 0x0028($sp)           
@@ -48,7 +48,7 @@ glabel func_8084EED8
 /* 1CD7C 8084EF8C 10000008 */  beq     $zero, $zero, .L8084EFB0   
 /* 1CD80 8084EF90 8FBF0024 */  lw      $ra, 0x0024($sp)           
 .L8084EF94:
-/* 1CD84 8084EF94 0C02914C */  jal     func_800A4530              
+/* 1CD84 8084EF94 0C02914C */  jal     SkelAnime_PastFrameTestUpdRate              
 /* 1CD88 8084EF98 3C05423C */  lui     $a1, 0x423C                ## $a1 = 423C0000
 /* 1CD8C 8084EF9C 10400003 */  beq     $v0, $zero, .L8084EFAC     
 /* 1CD90 8084EFA0 240F0140 */  addiu   $t7, $zero, 0x0140         ## $t7 = 00000140

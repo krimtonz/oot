@@ -27,7 +27,7 @@ glabel func_80851FB0
 /* 1FE00 80852010 0C20CA49 */  jal     func_80832924              
 /* 1FE04 80852014 24A551BC */  addiu   $a1, $a1, %lo(D_808551BC)  ## $a1 = 808551BC
 /* 1FE08 80852018 8FA40024 */  lw      $a0, 0x0024($sp)           
-/* 1FE0C 8085201C 0C02914C */  jal     func_800A4530              
+/* 1FE0C 8085201C 0C02914C */  jal     SkelAnime_PastFrameTestUpdRate              
 /* 1FE10 80852020 3C054370 */  lui     $a1, 0x4370                ## $a1 = 43700000
 /* 1FE14 80852024 10400003 */  beq     $v0, $zero, .L80852034     
 /* 1FE18 80852028 3C188003 */  lui     $t8, %hi(ActorShadow_DrawFunc_Teardrop)

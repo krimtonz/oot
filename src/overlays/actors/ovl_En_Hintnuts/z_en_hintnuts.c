@@ -231,9 +231,9 @@ void EnHintnuts_Wait(EnHintnuts* this, GlobalContext* globalCtx) {
     if (hasSlowPlaybackSpeed && this->animFlagAndTimer != 0) {
         this->animFlagAndTimer--;
     }
-    if (func_800A56C8(&this->skelAnime, 9.0f) != 0) {
+    if (SkelAnime_PastFrameTest(&this->skelAnime, 9.0f) != 0) {
         this->collider.base.acFlags |= 1;
-    } else if (func_800A56C8(&this->skelAnime, 8.0f) != 0) {
+    } else if (SkelAnime_PastFrameTest(&this->skelAnime, 8.0f) != 0) {
         Audio_PlayActorSound2(&this->actor, NA_SE_EN_NUTS_UP);
     }
     if (this->skelAnime.animCurrentFrame < 9.0f) {
@@ -266,7 +266,7 @@ void EnHintnuts_Wait(EnHintnuts* this, GlobalContext* globalCtx) {
 
 void EnHintnuts_LookAround(EnHintnuts* this, GlobalContext* globalCtx) {
     SkelAnime_FrameUpdateMatrix(&this->skelAnime);
-    if (func_800A56C8(&this->skelAnime, 0.0f) != 0 && this->animFlagAndTimer != 0) {
+    if (SkelAnime_PastFrameTest(&this->skelAnime, 0.0f) != 0 && this->animFlagAndTimer != 0) {
         this->animFlagAndTimer--;
     }
     if ((this->actor.xzDistFromLink < 120.0f) || (this->animFlagAndTimer == 0)) {
@@ -276,7 +276,7 @@ void EnHintnuts_LookAround(EnHintnuts* this, GlobalContext* globalCtx) {
 
 void EnHintnuts_Stand(EnHintnuts* this, GlobalContext* globalCtx) {
     SkelAnime_FrameUpdateMatrix(&this->skelAnime);
-    if (func_800A56C8(&this->skelAnime, 0.0f) != 0 && this->animFlagAndTimer != 0) {
+    if (SkelAnime_PastFrameTest(&this->skelAnime, 0.0f) != 0 && this->animFlagAndTimer != 0) {
         this->animFlagAndTimer--;
     }
     if (!(this->animFlagAndTimer & 0x1000)) {
@@ -297,7 +297,7 @@ void EnHintnuts_ThrowNut(EnHintnuts* this, GlobalContext* globalCtx) {
         EnHintnuts_SetupBurrow(this);
     } else if (SkelAnime_FrameUpdateMatrix(&this->skelAnime) != 0) {
         EnHintnuts_SetupStand(this);
-    } else if (func_800A56C8(&this->skelAnime, 6.0f) != 0) {
+    } else if (SkelAnime_PastFrameTest(&this->skelAnime, 6.0f) != 0) {
         nutPos.x = (Math_Sins(this->actor.shape.rot.y) * 23.0f) + this->actor.posRot.pos.x;
         nutPos.y = this->actor.posRot.pos.y + 12.0f;
         nutPos.z = (Math_Coss(this->actor.shape.rot.y) * 23.0f) + this->actor.posRot.pos.z;
@@ -319,7 +319,7 @@ void EnHintnuts_Burrow(EnHintnuts* this, GlobalContext* globalCtx) {
                                   : this->skelAnime.animCurrentFrame > 3.0f ? 3.0f : this->skelAnime.animCurrentFrame;
         this->collider.dim.height = (((3.0f - boundedCurrentFrame) * 12.0f) + 5.0f);
     }
-    if (func_800A56C8(&this->skelAnime, 4.0f) != 0) {
+    if (SkelAnime_PastFrameTest(&this->skelAnime, 4.0f) != 0) {
         this->collider.base.acFlags &= ~1;
     }
 
@@ -362,11 +362,11 @@ void EnHintnuts_Run(EnHintnuts* this, GlobalContext* globalCtx) {
     f32 phi_f0;
 
     SkelAnime_FrameUpdateMatrix(&this->skelAnime);
-    temp_ret = func_800A56C8(&this->skelAnime, 0.0f);
+    temp_ret = SkelAnime_PastFrameTest(&this->skelAnime, 0.0f);
     if (temp_ret != 0 && this->animFlagAndTimer != 0) {
         this->animFlagAndTimer--;
     }
-    if ((temp_ret != 0) || (func_800A56C8(&this->skelAnime, 6.0f) != 0)) {
+    if ((temp_ret != 0) || (SkelAnime_PastFrameTest(&this->skelAnime, 6.0f) != 0)) {
         Audio_PlayActorSound2(&this->actor, NA_SE_EN_NUTS_WALK);
     }
 
@@ -422,7 +422,7 @@ void EnHintnuts_Leave(EnHintnuts* this, GlobalContext* globalCtx) {
     if (this->animFlagAndTimer != 0) {
         this->animFlagAndTimer--;
     }
-    if ((func_800A56C8(&this->skelAnime, 0.0f) != 0) || (func_800A56C8(&this->skelAnime, 6.0f) != 0)) {
+    if ((SkelAnime_PastFrameTest(&this->skelAnime, 0.0f) != 0) || (SkelAnime_PastFrameTest(&this->skelAnime, 6.0f) != 0)) {
         Audio_PlayActorSound2(&this->actor, NA_SE_EN_NUTS_WALK);
     }
     if (this->actor.bgCheckFlags & 8) {
@@ -453,7 +453,7 @@ void EnHintnuts_Leave(EnHintnuts* this, GlobalContext* globalCtx) {
 void EnHintnuts_Freeze(EnHintnuts* this, GlobalContext* globalCtx) {
     this->actor.dmgEffectTimer = 1;
     SkelAnime_FrameUpdateMatrix(&this->skelAnime);
-    if (func_800A56C8(&this->skelAnime, 0.0f) != 0) {
+    if (SkelAnime_PastFrameTest(&this->skelAnime, 0.0f) != 0) {
         Audio_PlayActorSound2(&this->actor, NA_SE_EN_NUTS_FAINT);
     }
     if (this->animFlagAndTimer == 0) {

@@ -27,7 +27,7 @@ glabel func_8084BDFC
 /* 19C4C 8084BE5C 8FA40024 */  lw      $a0, 0x0024($sp)           
 /* 19C50 8084BE60 46062201 */  sub.s   $f8, $f4, $f6              
 /* 19C54 8084BE64 44054000 */  mfc1    $a1, $f8                   
-/* 19C58 8084BE68 0C02914C */  jal     func_800A4530              
+/* 19C58 8084BE68 0C02914C */  jal     SkelAnime_PastFrameTestUpdRate              
 /* 19C5C 8084BE6C 00000000 */  nop
 /* 19C60 8084BE70 10400005 */  beq     $v0, $zero, .L8084BE88     
 /* 19C64 8084BE74 3C014208 */  lui     $at, 0x4208                ## $at = 42080000
@@ -41,7 +41,7 @@ glabel func_8084BDFC
 /* 19C80 8084BE90 8FA40024 */  lw      $a0, 0x0024($sp)           
 /* 19C84 8084BE94 46105481 */  sub.s   $f18, $f10, $f16           
 /* 19C88 8084BE98 44059000 */  mfc1    $a1, $f18                  
-/* 19C8C 8084BE9C 0C02914C */  jal     func_800A4530              
+/* 19C8C 8084BE9C 0C02914C */  jal     SkelAnime_PastFrameTestUpdRate              
 /* 19C90 8084BEA0 00000000 */  nop
 /* 19C94 8084BEA4 1040000A */  beq     $v0, $zero, .L8084BED0     
 /* 19C98 8084BEA8 24019FFF */  addiu   $at, $zero, 0x9FFF         ## $at = FFFF9FFF

@@ -24,7 +24,7 @@ glabel func_80846260
 /* 140A4 808462B4 3C188086 */  lui     $t8, %hi(D_80858AB4)       ## $t8 = 80860000
 /* 140A8 808462B8 15E00012 */  bne     $t7, $zero, .L80846304     
 /* 140AC 808462BC 00000000 */  nop
-/* 140B0 808462C0 0C02914C */  jal     func_800A4530              
+/* 140B0 808462C0 0C02914C */  jal     SkelAnime_PastFrameTestUpdRate              
 /* 140B4 808462C4 3C0541D8 */  lui     $a1, 0x41D8                ## $a1 = 41D80000
 /* 140B8 808462C8 10400006 */  beq     $v0, $zero, .L808462E4     
 /* 140BC 808462CC 8FA40020 */  lw      $a0, 0x0020($sp)           
@@ -34,7 +34,7 @@ glabel func_80846260
 /* 140CC 808462DC 10000019 */  beq     $zero, $zero, .L80846344   
 /* 140D0 808462E0 AC500118 */  sw      $s0, 0x0118($v0)           ## 00000118
 .L808462E4:
-/* 140D4 808462E4 0C02914C */  jal     func_800A4530              
+/* 140D4 808462E4 0C02914C */  jal     SkelAnime_PastFrameTestUpdRate              
 /* 140D8 808462E8 3C0541C8 */  lui     $a1, 0x41C8                ## $a1 = 41C80000
 /* 140DC 808462EC 10400015 */  beq     $v0, $zero, .L80846344     
 /* 140E0 808462F0 02002025 */  or      $a0, $s0, $zero            ## $a0 = 00000000

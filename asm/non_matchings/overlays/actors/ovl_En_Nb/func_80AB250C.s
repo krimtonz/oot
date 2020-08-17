@@ -8,11 +8,11 @@ glabel func_80AB250C
 /* 01794 80AB2524 2484014C */  addiu   $a0, $a0, 0x014C           ## $a0 = 0000014C
 /* 01798 80AB2528 3C054190 */  lui     $a1, 0x4190                ## $a1 = 41900000
 /* 0179C 80AB252C AFA4001C */  sw      $a0, 0x001C($sp)           
-/* 017A0 80AB2530 0C0295B2 */  jal     func_800A56C8              
+/* 017A0 80AB2530 0C0295B2 */  jal     SkelAnime_FrameTest              
 /* 017A4 80AB2534 AFA60028 */  sw      $a2, 0x0028($sp)           
 /* 017A8 80AB2538 14400005 */  bne     $v0, $zero, .L80AB2550     
 /* 017AC 80AB253C 8FA4001C */  lw      $a0, 0x001C($sp)           
-/* 017B0 80AB2540 0C0295B2 */  jal     func_800A56C8              
+/* 017B0 80AB2540 0C0295B2 */  jal     SkelAnime_FrameTest              
 /* 017B4 80AB2544 3C0541C8 */  lui     $a1, 0x41C8                ## $a1 = 41C80000
 /* 017B8 80AB2548 50400006 */  beql    $v0, $zero, .L80AB2564     
 /* 017BC 80AB254C 8FBF0014 */  lw      $ra, 0x0014($sp)           

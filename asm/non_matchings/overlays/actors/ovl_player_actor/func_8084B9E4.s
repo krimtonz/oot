@@ -27,7 +27,7 @@ glabel func_8084B9E4
 /* 19834 8084BA44 1520000A */  bne     $t1, $zero, .L8084BA70     
 /* 19838 8084BA48 00000000 */  nop
 /* 1983C 8084BA4C 260401B4 */  addiu   $a0, $s0, 0x01B4           ## $a0 = 000001B4
-/* 19840 8084BA50 0C02914C */  jal     func_800A4530              
+/* 19840 8084BA50 0C02914C */  jal     SkelAnime_PastFrameTestUpdRate              
 /* 19844 8084BA54 3C054130 */  lui     $a1, 0x4130                ## $a1 = 41300000
 /* 19848 8084BA58 10400007 */  beq     $v0, $zero, .L8084BA78     
 /* 1984C 8084BA5C 02002025 */  or      $a0, $s0, $zero            ## $a0 = 00000000

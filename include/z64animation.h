@@ -173,16 +173,16 @@ struct SkelAnime {
 }; // size = 0x44
 
 typedef s32 (*OverrideLimbDraw)(struct GlobalContext* globalCtx, s32 limbIndex, Gfx** dList,
-             Vec3f* pos, Vec3s* rot, struct Actor* actor);
+             Vec3f* pos, Vec3s* rot, void* callbackData);
 
 typedef void (*PostLimbDraw)(struct GlobalContext* globalCtx, s32 limbIndex, Gfx** dList,
-                                          Vec3s* rot, struct Actor* actor);
+                                          Vec3s* rot, void* callbackData);
 
 typedef s32 (*OverrideLimbDraw2)(struct GlobalContext* globalCtx, s32 limbIndex, Gfx** dList,
-             Vec3f* pos, Vec3s* rot, struct Actor* actor, Gfx** gfx);
+             Vec3f* pos, Vec3s* rot, void* callbackData, Gfx** gfx);
 
 typedef void (*PostLimbDraw2)(struct GlobalContext* globalCtx, s32 limbIndex, Gfx** dList,
-                                          Vec3s* rot, struct Actor* actor, Gfx** gfx);
+                                          Vec3s* rot, void* callbackData, Gfx** gfx);
 
 typedef void (*AnimationEntryCallback)(struct GlobalContext*, AnimationEntryType*);
 

@@ -7,7 +7,7 @@ glabel func_80AB2570
 /* 017F4 80AB2584 15C10009 */  bne     $t6, $at, .L80AB25AC       
 /* 017F8 80AB2588 2484014C */  addiu   $a0, $a0, 0x014C           ## $a0 = 0000014C
 /* 017FC 80AB258C 3C054110 */  lui     $a1, 0x4110                ## $a1 = 41100000
-/* 01800 80AB2590 0C0295B2 */  jal     func_800A56C8              
+/* 01800 80AB2590 0C0295B2 */  jal     SkelAnime_FrameTest              
 /* 01804 80AB2594 AFA60018 */  sw      $a2, 0x0018($sp)           
 /* 01808 80AB2598 10400004 */  beq     $v0, $zero, .L80AB25AC     
 /* 0180C 80AB259C 8FA60018 */  lw      $a2, 0x0018($sp)           

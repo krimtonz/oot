@@ -133,7 +133,7 @@ glabel EnCrow_Update
 /* 011BC 809E13FC 2604017C */  addiu   $a0, $s0, 0x017C           ## $a0 = 0000017C
 /* 011C0 809E1400 53000008 */  beql    $t8, $zero, .L809E1424     
 /* 011C4 809E1404 8FBF0024 */  lw      $ra, 0x0024($sp)           
-/* 011C8 809E1408 0C0295B2 */  jal     func_800A56C8              
+/* 011C8 809E1408 0C0295B2 */  jal     SkelAnime_FrameTest              
 /* 011CC 809E140C 3C054040 */  lui     $a1, 0x4040                ## $a1 = 40400000
 /* 011D0 809E1410 10400003 */  beq     $v0, $zero, .L809E1420     
 /* 011D4 809E1414 02002025 */  or      $a0, $s0, $zero            ## $a0 = 00000000

@@ -66,7 +66,7 @@ glabel func_80843CEC
 /* 11BCC 80843DDC 25292F08 */  addiu   $t1, $t1, 0x2F08           ## $t1 = 00002F08
 /* 11BD0 80843DE0 15220007 */  bne     $t1, $v0, .L80843E00       
 /* 11BD4 80843DE4 00C02025 */  or      $a0, $a2, $zero            ## $a0 = 00000000
-/* 11BD8 80843DE8 0C02914C */  jal     func_800A4530              
+/* 11BD8 80843DE8 0C02914C */  jal     SkelAnime_PastFrameTestUpdRate              
 /* 11BDC 80843DEC 3C0542B0 */  lui     $a1, 0x42B0                ## $a1 = 42B00000
 /* 11BE0 80843DF0 10400003 */  beq     $v0, $zero, .L80843E00     
 /* 11BE4 80843DF4 02002025 */  or      $a0, $s0, $zero            ## $a0 = 00000000

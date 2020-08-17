@@ -40,7 +40,7 @@ glabel func_8084E1EC
 /* 1C06C 8084E27C 31090400 */  andi    $t1, $t0, 0x0400           ## $t1 = 00000000
 /* 1C070 8084E280 51200010 */  beql    $t1, $zero, .L8084E2C4     
 /* 1C074 8084E284 8FA40024 */  lw      $a0, 0x0024($sp)           
-/* 1C078 8084E288 0C02914C */  jal     func_800A4530              
+/* 1C078 8084E288 0C02914C */  jal     SkelAnime_PastFrameTestUpdRate              
 /* 1C07C 8084E28C 3C054120 */  lui     $a1, 0x4120                ## $a1 = 41200000
 /* 1C080 8084E290 1040000B */  beq     $v0, $zero, .L8084E2C0     
 /* 1C084 8084E294 02002025 */  or      $a0, $s0, $zero            ## $a0 = 00000000
@@ -57,7 +57,7 @@ glabel func_8084E1EC
 .L8084E2C0:
 /* 1C0B0 8084E2C0 8FA40024 */  lw      $a0, 0x0024($sp)           
 .L8084E2C4:
-/* 1C0B4 8084E2C4 0C02914C */  jal     func_800A4530              
+/* 1C0B4 8084E2C4 0C02914C */  jal     SkelAnime_PastFrameTestUpdRate              
 /* 1C0B8 8084E2C8 3C0540A0 */  lui     $a1, 0x40A0                ## $a1 = 40A00000
 /* 1C0BC 8084E2CC 10400003 */  beq     $v0, $zero, .L8084E2DC     
 /* 1C0C0 8084E2D0 02002025 */  or      $a0, $s0, $zero            ## $a0 = 00000000

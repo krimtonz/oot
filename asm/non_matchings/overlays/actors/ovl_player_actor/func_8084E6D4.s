@@ -176,7 +176,7 @@ glabel func_8084E6D4
 /* 1C744 8084E954 24060FA0 */  addiu   $a2, $zero, 0x0FA0         ## $a2 = 00000FA0
 /* 1C748 8084E958 8FA40038 */  lw      $a0, 0x0038($sp)           
 .L8084E95C:
-/* 1C74C 8084E95C 0C02914C */  jal     func_800A4530              
+/* 1C74C 8084E95C 0C02914C */  jal     SkelAnime_PastFrameTestUpdRate              
 /* 1C750 8084E960 3C0541A8 */  lui     $a1, 0x41A8                ## $a1 = 41A80000
 /* 1C754 8084E964 10400003 */  beq     $v0, $zero, .L8084E974     
 /* 1C758 8084E968 02002025 */  or      $a0, $s0, $zero            ## $a0 = 00000000

@@ -439,15 +439,15 @@ void EnFloormas_Stand(EnFloormas* this, GlobalContext* globalCtx) {
 void EnFloormas_BigWalk(EnFloormas* this, GlobalContext* globalCtx) {
     s32 animPastFrame;
     SkelAnime_FrameUpdateMatrix(&this->skelAnime);
-    animPastFrame = func_800A56C8(&this->skelAnime, 0.0f);
+    animPastFrame = SkelAnime_PastFrameTest(&this->skelAnime, 0.0f);
     if (animPastFrame) {
         if (this->actionTimer != 0) {
             this->actionTimer--;
         }
     }
-    if (((animPastFrame || (func_800A56C8(&this->skelAnime, 12.0f))) ||
-         (func_800A56C8(&this->skelAnime, 24.0f) != 0)) ||
-        (func_800A56C8(&this->skelAnime, 36.0f) != 0)) {
+    if (((animPastFrame || (SkelAnime_PastFrameTest(&this->skelAnime, 12.0f))) ||
+         (SkelAnime_PastFrameTest(&this->skelAnime, 24.0f) != 0)) ||
+        (SkelAnime_PastFrameTest(&this->skelAnime, 36.0f) != 0)) {
         Audio_PlayActorSound2(&this->actor, NA_SE_EN_FALL_WALK);
     }
 
@@ -474,9 +474,9 @@ void EnFloormas_BigStopWalk(EnFloormas* this, GlobalContext* globalCtx) {
 
 void EnFloormas_Run(EnFloormas* this, GlobalContext* globalCtx) {
     SkelAnime_FrameUpdateMatrix(&this->skelAnime);
-    if ((((func_800A56C8(&this->skelAnime, 0.0f)) || (func_800A56C8(&this->skelAnime, 12.0f))) ||
-         (func_800A56C8(&this->skelAnime, 24.0f))) ||
-        (func_800A56C8(&this->skelAnime, 36.0f))) {
+    if ((((SkelAnime_PastFrameTest(&this->skelAnime, 0.0f)) || (SkelAnime_PastFrameTest(&this->skelAnime, 12.0f))) ||
+         (SkelAnime_PastFrameTest(&this->skelAnime, 24.0f))) ||
+        (SkelAnime_PastFrameTest(&this->skelAnime, 36.0f))) {
         Audio_PlayActorSound2(&this->actor, NA_SE_EN_FALL_WALK);
     }
 
@@ -499,8 +499,8 @@ void EnFloormas_Turn(EnFloormas* this, GlobalContext* globalCtx) {
         EnFloormas_SetupStand(this);
     }
 
-    if (((this->skelAnime.animPlaybackSpeed > 0.0f) && func_800A56C8(&this->skelAnime, 21.0f)) ||
-        ((this->skelAnime.animPlaybackSpeed < 0.0f) && func_800A56C8(&this->skelAnime, 6.0f))) {
+    if (((this->skelAnime.animPlaybackSpeed > 0.0f) && SkelAnime_PastFrameTest(&this->skelAnime, 21.0f)) ||
+        ((this->skelAnime.animPlaybackSpeed < 0.0f) && SkelAnime_PastFrameTest(&this->skelAnime, 6.0f))) {
         if (this->actor.scale.x > 0.004f) {
             Audio_PlayActorSound2(&this->actor, NA_SE_EN_FALL_WALK);
         } else {
@@ -648,7 +648,7 @@ void EnFloormas_SmWalk(EnFloormas* this, GlobalContext* globalCtx) {
     SkelAnime_FrameUpdateMatrix(&this->skelAnime);
     DECR(this->smActionTimer);
 
-    if ((func_800A56C8(&this->skelAnime, 0.0f)) || (func_800A56C8(&this->skelAnime, 18.0f))) {
+    if ((SkelAnime_PastFrameTest(&this->skelAnime, 0.0f)) || (SkelAnime_PastFrameTest(&this->skelAnime, 18.0f))) {
         Audio_PlayActorSound2(&this->actor, NA_SE_EN_FLOORMASTER_SM_WALK);
     }
 
@@ -667,7 +667,7 @@ void EnFloormas_SmDecideAction(EnFloormas* this, GlobalContext* globalCtx) {
     s32 isAgainstWall;
 
     SkelAnime_FrameUpdateMatrix(&this->skelAnime);
-    if ((func_800A56C8(&this->skelAnime, 0.0f)) || (func_800A56C8(&this->skelAnime, 18.0f))) {
+    if ((SkelAnime_PastFrameTest(&this->skelAnime, 0.0f)) || (SkelAnime_PastFrameTest(&this->skelAnime, 18.0f))) {
         Audio_PlayActorSound2(&this->actor, NA_SE_EN_FLOORMASTER_SM_WALK);
     }
     isAgainstWall = this->actor.bgCheckFlags & 8;
@@ -713,7 +713,7 @@ void EnFloormas_JumpAtLink(EnFloormas* this, GlobalContext* globalCtx) {
     SkelAnime_FrameUpdateMatrix(&this->skelAnime);
     if (this->skelAnime.animCurrentFrame < 20.0f) {
         Math_SmoothScaleMaxS(&this->actor.shape.rot.y, this->actor.yawTowardsLink, 2, 0xE38);
-    } else if (func_800A56C8(&this->skelAnime, 20.0f)) {
+    } else if (SkelAnime_PastFrameTest(&this->skelAnime, 20.0f)) {
         this->actor.speedXZ = 5.0f;
         this->actor.velocity.y = 7.0f;
     } else if (this->actor.bgCheckFlags & 2) {
@@ -807,7 +807,7 @@ void EnFloormas_SmSlaveJumpAtMaster(EnFloormas* this, GlobalContext* globalCtx) 
         }
         return;
     }
-    if (func_800A56C8(&this->skelAnime, 20.0f)) {
+    if (SkelAnime_PastFrameTest(&this->skelAnime, 20.0f)) {
         this->actor.speedXZ = 5.0f;
         this->actor.velocity.y = 7.0f;
     } else if (this->skelAnime.animCurrentFrame < 20.0f) {
@@ -912,7 +912,7 @@ void EnFloormas_TakeDamage(EnFloormas* this, GlobalContext* globalCtx) {
         }
     }
 
-    if (func_800A56C8(&this->skelAnime, 13.0f)) {
+    if (SkelAnime_PastFrameTest(&this->skelAnime, 13.0f)) {
         if (this->actor.scale.x > 0.004f) {
             Audio_PlayActorSound2(&this->actor, NA_SE_EN_DODO_M_GND);
         } else {
@@ -1049,24 +1049,24 @@ void EnFloormas_Update(Actor* thisx, GlobalContext* globalCtx) {
 }
 
 s32 EnFloormas_OverrideLimbDraw(GlobalContext* globalCtx, s32 limbIndex, Gfx** dList, Vec3f* pos, Vec3s* rot,
-                                Actor* thisx, Gfx** gfx) {
+                                void* thisx, Gfx** appendBuf) {
     EnFloormas* this = THIS;
     if (limbIndex == 1) {
         pos->z += this->zOffset;
     }
-    return 0;
+    return false;
 }
 
-void EnFloormas_PostLimbDraw(GlobalContext* globalCtx, s32 limbIndex, Gfx** dList, Vec3s* rot, Actor* thisx,
-                             Gfx** gfx) {
+void EnFloormas_PostLimbDraw(GlobalContext* globalCtx, s32 limbIndex, Gfx** dList, Vec3s* rot, void* thisx,
+                             Gfx** appendBuf) {
     if (limbIndex == 2) {
         Matrix_Push();
         Matrix_Translate(1600.0f, -700.0f, -1700.0f, MTXMODE_APPLY);
         Matrix_RotateY(DEGTORAD(60.0f), 1);
         Matrix_RotateZ(DEGTORAD(15.0f), 1);
         Matrix_Scale(2.0f, 2.0f, 2.0f, MTXMODE_APPLY);
-        gSPMatrix((*gfx)++, Matrix_NewMtx(globalCtx->state.gfxCtx, "../z_en_floormas.c", 2299), G_MTX_LOAD);
-        gSPDisplayList((*gfx)++, D_06008688);
+        gSPMatrix((*appendBuf)++, Matrix_NewMtx(globalCtx->state.gfxCtx, "../z_en_floormas.c", 2299), G_MTX_LOAD);
+        gSPDisplayList((*appendBuf)++, D_06008688);
         Matrix_Pull();
     }
 }

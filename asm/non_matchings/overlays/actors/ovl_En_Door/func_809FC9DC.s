@@ -52,7 +52,7 @@ glabel func_809FC9DC
 /* 008B0 809FCA80 46062100 */  add.s   $f4, $f4, $f6              
 .L809FCA84:
 /* 008B4 809FCA84 44052000 */  mfc1    $a1, $f4                   
-/* 008B8 809FCA88 0C0295B2 */  jal     func_800A56C8              
+/* 008B8 809FCA88 0C0295B2 */  jal     SkelAnime_FrameTest              
 /* 008BC 809FCA8C 00000000 */  nop
 /* 008C0 809FCA90 10400037 */  beq     $v0, $zero, .L809FCB70     
 /* 008C4 809FCA94 02802025 */  or      $a0, $s4, $zero            ## $a0 = 00000000
@@ -130,7 +130,7 @@ glabel func_809FC9DC
 /* 009CC 809FCB9C 46083180 */  add.s   $f6, $f6, $f8              
 .L809FCBA0:
 /* 009D0 809FCBA0 44053000 */  mfc1    $a1, $f6                   
-/* 009D4 809FCBA4 0C0295B2 */  jal     func_800A56C8              
+/* 009D4 809FCBA4 0C0295B2 */  jal     SkelAnime_FrameTest              
 /* 009D8 809FCBA8 00000000 */  nop
 /* 009DC 809FCBAC 1040000E */  beq     $v0, $zero, .L809FCBE8     
 /* 009E0 809FCBB0 02802025 */  or      $a0, $s4, $zero            ## $a0 = 00000000

@@ -22,7 +22,7 @@ glabel func_80AA7134
 .L80AA717C:
 /* 0112C 80AA717C 54400008 */  bnel    $v0, $zero, .L80AA71A0     
 /* 01130 80AA7180 8FBF0014 */  lw      $ra, 0x0014($sp)           
-/* 01134 80AA7184 0C0295B2 */  jal     func_800A56C8              
+/* 01134 80AA7184 0C0295B2 */  jal     SkelAnime_FrameTest              
 /* 01138 80AA7188 AFA60020 */  sw      $a2, 0x0020($sp)           
 /* 0113C 80AA718C 10400003 */  beq     $v0, $zero, .L80AA719C     
 /* 01140 80AA7190 8FA60020 */  lw      $a2, 0x0020($sp)           

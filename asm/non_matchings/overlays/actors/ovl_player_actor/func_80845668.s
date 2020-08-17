@@ -27,7 +27,7 @@ glabel func_80845668
 /* 134A0 808456B0 44812000 */  mtc1    $at, $f4                   ## $f4 = 1.00
 /* 134A4 808456B4 3C054100 */  lui     $a1, 0x4100                ## $a1 = 41000000
 /* 134A8 808456B8 E6040838 */  swc1    $f4, 0x0838($s0)           ## 00000838
-/* 134AC 808456BC 0C02914C */  jal     func_800A4530              
+/* 134AC 808456BC 0C02914C */  jal     SkelAnime_PastFrameTestUpdRate              
 /* 134B0 808456C0 8FA4002C */  lw      $a0, 0x002C($sp)           
 /* 134B4 808456C4 1040007D */  beq     $v0, $zero, .L808458BC     
 /* 134B8 808456C8 3C0B8016 */  lui     $t3, %hi(gSaveContext+4)
@@ -108,7 +108,7 @@ glabel func_80845668
 /* 135C4 808457D4 1502000D */  bne     $t0, $v0, .L8084580C       
 /* 135C8 808457D8 3C090400 */  lui     $t1, 0x0400                ## $t1 = 04000000
 /* 135CC 808457DC 8FA4002C */  lw      $a0, 0x002C($sp)           
-/* 135D0 808457E0 0C02914C */  jal     func_800A4530              
+/* 135D0 808457E0 0C02914C */  jal     SkelAnime_PastFrameTestUpdRate              
 /* 135D4 808457E4 3C0541F0 */  lui     $a1, 0x41F0                ## $a1 = 41F00000
 /* 135D8 808457E8 10400004 */  beq     $v0, $zero, .L808457FC     
 /* 135DC 808457EC 8FA40044 */  lw      $a0, 0x0044($sp)           
@@ -137,7 +137,7 @@ glabel func_80845668
 .L8084583C:
 /* 1362C 8084583C 44050000 */  mfc1    $a1, $f0                   
 .L80845840:
-/* 13630 80845840 0C02914C */  jal     func_800A4530              
+/* 13630 80845840 0C02914C */  jal     SkelAnime_PastFrameTestUpdRate              
 /* 13634 80845844 8FA4002C */  lw      $a0, 0x002C($sp)           
 /* 13638 80845848 50400007 */  beql    $v0, $zero, .L80845868     
 /* 1363C 8084584C 8E0C01BC */  lw      $t4, 0x01BC($s0)           ## 000001BC

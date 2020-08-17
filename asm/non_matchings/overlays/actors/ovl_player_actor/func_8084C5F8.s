@@ -51,12 +51,12 @@ glabel func_8084C5F8
 .L8084C6B0:
 /* 1A4A0 8084C6B0 8C650000 */  lw      $a1, 0x0000($v1)           ## 808548A0
 /* 1A4A4 8084C6B4 AFA30038 */  sw      $v1, 0x0038($sp)           
-/* 1A4A8 8084C6B8 0C02914C */  jal     func_800A4530              
+/* 1A4A8 8084C6B8 0C02914C */  jal     SkelAnime_PastFrameTestUpdRate              
 /* 1A4AC 8084C6BC 8FA40020 */  lw      $a0, 0x0020($sp)           
 /* 1A4B0 8084C6C0 14400006 */  bne     $v0, $zero, .L8084C6DC     
 /* 1A4B4 8084C6C4 8FA30038 */  lw      $v1, 0x0038($sp)           
 /* 1A4B8 8084C6C8 8FA40020 */  lw      $a0, 0x0020($sp)           
-/* 1A4BC 8084C6CC 0C02914C */  jal     func_800A4530              
+/* 1A4BC 8084C6CC 0C02914C */  jal     SkelAnime_PastFrameTestUpdRate              
 /* 1A4C0 8084C6D0 8C650004 */  lw      $a1, 0x0004($v1)           ## 00000004
 /* 1A4C4 8084C6D4 5040001E */  beql    $v0, $zero, .L8084C750     
 /* 1A4C8 8084C6D8 8FBF001C */  lw      $ra, 0x001C($sp)           

@@ -69,7 +69,7 @@ glabel func_8084DC48
 /* 1BB28 8084DD38 10000008 */  beq     $zero, $zero, .L8084DD5C   
 /* 1BB2C 8084DD3C 00000000 */  nop
 .L8084DD40:
-/* 1BB30 8084DD40 0C02914C */  jal     func_800A4530              
+/* 1BB30 8084DD40 0C02914C */  jal     SkelAnime_PastFrameTestUpdRate              
 /* 1BB34 8084DD44 3C0541A0 */  lui     $a1, 0x41A0                ## $a1 = 41A00000
 /* 1BB38 8084DD48 10400004 */  beq     $v0, $zero, .L8084DD5C     
 /* 1BB3C 8084DD4C 3C01C000 */  lui     $at, 0xC000                ## $at = C0000000

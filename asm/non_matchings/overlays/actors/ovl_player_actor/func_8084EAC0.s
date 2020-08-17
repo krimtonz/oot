@@ -122,7 +122,7 @@ glabel func_8084EAC0
 .L8084EC70:
 /* 1CA60 8084EC70 14410007 */  bne     $v0, $at, .L8084EC90       
 /* 1CA64 8084EC74 00C02025 */  or      $a0, $a2, $zero            ## $a0 = 00000000
-/* 1CA68 8084EC78 0C02914C */  jal     func_800A4530              
+/* 1CA68 8084EC78 0C02914C */  jal     SkelAnime_PastFrameTestUpdRate              
 /* 1CA6C 8084EC7C 3C0541E8 */  lui     $a1, 0x41E8                ## $a1 = 41E80000
 /* 1CA70 8084EC80 10400003 */  beq     $v0, $zero, .L8084EC90     
 /* 1CA74 8084EC84 02002025 */  or      $a0, $s0, $zero            ## $a0 = 00000000

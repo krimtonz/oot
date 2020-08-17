@@ -58,7 +58,7 @@ glabel func_8084BBE4
 /* 19A84 8084BC94 00000000 */  nop
 /* 19A88 8084BC98 44050000 */  mfc1    $a1, $f0                   
 .L8084BC9C:
-/* 19A8C 8084BC9C 0C02914C */  jal     func_800A4530              
+/* 19A8C 8084BC9C 0C02914C */  jal     SkelAnime_PastFrameTestUpdRate              
 /* 19A90 8084BCA0 00C02025 */  or      $a0, $a2, $zero            ## $a0 = 00000000
 /* 19A94 8084BCA4 1040000C */  beq     $v0, $zero, .L8084BCD8     
 /* 19A98 8084BCA8 02002025 */  or      $a0, $s0, $zero            ## $a0 = 00000000

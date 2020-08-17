@@ -53,7 +53,7 @@ glabel func_80AC0F64
 /* 009AC 80AC100C 10000009 */  beq     $zero, $zero, .L80AC1034   
 /* 009B0 80AC1010 8FA40020 */  lw      $a0, 0x0020($sp)           
 .L80AC1014:
-/* 009B4 80AC1014 0C0295B2 */  jal     func_800A56C8              
+/* 009B4 80AC1014 0C0295B2 */  jal     SkelAnime_FrameTest              
 /* 009B8 80AC1018 3C0540A0 */  lui     $a1, 0x40A0                ## $a1 = 40A00000
 /* 009BC 80AC101C 10400004 */  beq     $v0, $zero, .L80AC1030     
 /* 009C0 80AC1020 02002025 */  or      $a0, $s0, $zero            ## $a0 = 00000000
@@ -64,7 +64,7 @@ glabel func_80AC0F64
 .L80AC1030:
 /* 009D0 80AC1030 8FA40020 */  lw      $a0, 0x0020($sp)           
 .L80AC1034:
-/* 009D4 80AC1034 0C0295B2 */  jal     func_800A56C8              
+/* 009D4 80AC1034 0C0295B2 */  jal     SkelAnime_FrameTest              
 /* 009D8 80AC1038 3C054000 */  lui     $a1, 0x4000                ## $a1 = 40000000
 /* 009DC 80AC103C 10400003 */  beq     $v0, $zero, .L80AC104C     
 /* 009E0 80AC1040 02002025 */  or      $a0, $s0, $zero            ## $a0 = 00000000
@@ -73,7 +73,7 @@ glabel func_80AC0F64
 /* 009E8 80AC1048 240538C2 */  addiu   $a1, $zero, 0x38C2         ## $a1 = 000038C2
 .L80AC104C:
 /* 009EC 80AC104C 8FA40020 */  lw      $a0, 0x0020($sp)           
-/* 009F0 80AC1050 0C0295B2 */  jal     func_800A56C8              
+/* 009F0 80AC1050 0C0295B2 */  jal     SkelAnime_FrameTest              
 /* 009F4 80AC1054 3C054140 */  lui     $a1, 0x4140                ## $a1 = 41400000
 /* 009F8 80AC1058 10400003 */  beq     $v0, $zero, .L80AC1068     
 /* 009FC 80AC105C 02002025 */  or      $a0, $s0, $zero            ## $a0 = 00000000
@@ -82,11 +82,11 @@ glabel func_80AC0F64
 /* 00A04 80AC1064 240538C3 */  addiu   $a1, $zero, 0x38C3         ## $a1 = 000038C3
 .L80AC1068:
 /* 00A08 80AC1068 8FA40020 */  lw      $a0, 0x0020($sp)           
-/* 00A0C 80AC106C 0C0295B2 */  jal     func_800A56C8              
+/* 00A0C 80AC106C 0C0295B2 */  jal     SkelAnime_FrameTest              
 /* 00A10 80AC1070 3C054040 */  lui     $a1, 0x4040                ## $a1 = 40400000
 /* 00A14 80AC1074 14400004 */  bne     $v0, $zero, .L80AC1088     
 /* 00A18 80AC1078 8FA40020 */  lw      $a0, 0x0020($sp)           
-/* 00A1C 80AC107C 0C0295B2 */  jal     func_800A56C8              
+/* 00A1C 80AC107C 0C0295B2 */  jal     SkelAnime_FrameTest              
 /* 00A20 80AC1080 3C054170 */  lui     $a1, 0x4170                ## $a1 = 41700000
 /* 00A24 80AC1084 10400003 */  beq     $v0, $zero, .L80AC1094     
 .L80AC1088:

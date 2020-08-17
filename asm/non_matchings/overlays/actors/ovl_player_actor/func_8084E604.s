@@ -20,7 +20,7 @@ glabel func_8084E604
 /* 1C43C 8084E64C 00000000 */  nop
 .L8084E650:
 /* 1C440 8084E650 00C02025 */  or      $a0, $a2, $zero            ## $a0 = 00000000
-/* 1C444 8084E654 0C02914C */  jal     func_800A4530              
+/* 1C444 8084E654 0C02914C */  jal     SkelAnime_PastFrameTestUpdRate              
 /* 1C448 8084E658 3C054040 */  lui     $a1, 0x4040                ## $a1 = 40400000
 /* 1C44C 8084E65C 10400016 */  beq     $v0, $zero, .L8084E6B8     
 /* 1C450 8084E660 24040001 */  addiu   $a0, $zero, 0x0001         ## $a0 = 00000001

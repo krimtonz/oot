@@ -57,7 +57,7 @@ glabel func_8084CC98
 /* 1AB3C 8084CD4C 46062100 */  add.s   $f4, $f4, $f6
 .L8084CD50:
 /* 1AB40 8084CD50 44052000 */  mfc1    $a1, $f4
-/* 1AB44 8084CD54 0C02914C */  jal     func_800A4530
+/* 1AB44 8084CD54 0C02914C */  jal     SkelAnime_PastFrameTestUpdRate
 /* 1AB48 8084CD58 AFA3002C */  sw      $v1, 0x002C($sp)
 /* 1AB4C 8084CD5C 10400006 */  beq     $v0, $zero, .L8084CD78
 /* 1AB50 8084CD60 8FA3002C */  lw      $v1, 0x002C($sp)
@@ -78,7 +78,7 @@ glabel func_8084CC98
 /* 1AB88 8084CD98 460A4200 */  add.s   $f8, $f8, $f10
 .L8084CD9C:
 /* 1AB8C 8084CD9C 44054000 */  mfc1    $a1, $f8
-/* 1AB90 8084CDA0 0C02914C */  jal     func_800A4530
+/* 1AB90 8084CDA0 0C02914C */  jal     SkelAnime_PastFrameTestUpdRate
 /* 1AB94 8084CDA4 00000000 */  nop
 /* 1AB98 8084CDA8 10400189 */  beq     $v0, $zero, .L8084D3D0
 /* 1AB9C 8084CDAC 8FA40054 */  lw      $a0, 0x0054($sp)
@@ -323,7 +323,7 @@ glabel func_8084CC98
 /* 1AEF8 8084D108 156C0012 */  bne     $t3, $t4, .L8084D154
 /* 1AEFC 8084D10C 00C02025 */  or      $a0, $a2, $zero            ## $a0 = 00000000
 /* 1AF00 8084D110 00C02025 */  or      $a0, $a2, $zero            ## $a0 = 00000000
-/* 1AF04 8084D114 0C02914C */  jal     func_800A4530
+/* 1AF04 8084D114 0C02914C */  jal     SkelAnime_PastFrameTestUpdRate
 /* 1AF08 8084D118 3C0541B8 */  lui     $a1, 0x41B8                ## $a1 = 41B80000
 /* 1AF0C 8084D11C 10400006 */  beq     $v0, $zero, .L8084D138
 /* 1AF10 8084D120 02002025 */  or      $a0, $s0, $zero            ## $a0 = 00000000
@@ -341,7 +341,7 @@ glabel func_8084CC98
 /* 1AF3C 8084D14C 10000037 */  beq     $zero, $zero, .L8084D22C
 /* 1AF40 8084D150 8E09067C */  lw      $t1, 0x067C($s0)           ## 0000067C
 .L8084D154:
-/* 1AF44 8084D154 0C02914C */  jal     func_800A4530
+/* 1AF44 8084D154 0C02914C */  jal     SkelAnime_PastFrameTestUpdRate
 /* 1AF48 8084D158 3C054120 */  lui     $a1, 0x4120                ## $a1 = 41200000
 /* 1AF4C 8084D15C 10400006 */  beq     $v0, $zero, .L8084D178
 /* 1AF50 8084D160 02002025 */  or      $a0, $s0, $zero            ## $a0 = 00000000

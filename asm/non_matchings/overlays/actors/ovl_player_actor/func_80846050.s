@@ -22,7 +22,7 @@ glabel func_80846050
 /* 13E90 808460A0 8FBF001C */  lw      $ra, 0x001C($sp)           
 .L808460A4:
 /* 13E94 808460A4 00C02025 */  or      $a0, $a2, $zero            ## $a0 = 00000000
-/* 13E98 808460A8 0C02914C */  jal     func_800A4530              
+/* 13E98 808460A8 0C02914C */  jal     SkelAnime_PastFrameTestUpdRate              
 /* 13E9C 808460AC 3C054080 */  lui     $a1, 0x4080                ## $a1 = 40800000
 /* 13EA0 808460B0 10400013 */  beq     $v0, $zero, .L80846100     
 /* 13EA4 808460B4 260403BE */  addiu   $a0, $s0, 0x03BE           ## $a0 = 000003BE

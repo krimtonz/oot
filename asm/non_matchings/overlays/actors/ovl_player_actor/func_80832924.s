@@ -38,7 +38,7 @@ glabel func_80832924
 /* 0079C 808329AC 46802020 */  cvt.s.w $f0, $f4                   
 /* 007A0 808329B0 46000005 */  abs.s   $f0, $f0                   
 /* 007A4 808329B4 44050000 */  mfc1    $a1, $f0                   
-/* 007A8 808329B8 0C02914C */  jal     func_800A4530              
+/* 007A8 808329B8 0C02914C */  jal     SkelAnime_PastFrameTestUpdRate              
 /* 007AC 808329BC 00000000 */  nop
 /* 007B0 808329C0 1040003E */  beq     $v0, $zero, .L80832ABC     
 /* 007B4 808329C4 32027800 */  andi    $v0, $s0, 0x7800           ## $v0 = 00000000

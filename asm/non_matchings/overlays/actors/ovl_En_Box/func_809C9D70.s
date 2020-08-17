@@ -54,7 +54,7 @@ glabel func_809C9D70
 /* 01054 809C9E14 8FBF0024 */  lw      $ra, 0x0024($sp)           
 .L809C9E18:
 /* 01058 809C9E18 A7A0002E */  sh      $zero, 0x002E($sp)         
-/* 0105C 809C9E1C 0C0295B2 */  jal     func_800A56C8              
+/* 0105C 809C9E1C 0C0295B2 */  jal     SkelAnime_FrameTest              
 /* 01060 809C9E20 8FA40028 */  lw      $a0, 0x0028($sp)           
 /* 01064 809C9E24 10400004 */  beq     $v0, $zero, .L809C9E38     
 /* 01068 809C9E28 8FA40028 */  lw      $a0, 0x0028($sp)           
@@ -62,7 +62,7 @@ glabel func_809C9D70
 /* 01070 809C9E30 10000006 */  beq     $zero, $zero, .L809C9E4C   
 /* 01074 809C9E34 A7A4002E */  sh      $a0, 0x002E($sp)           
 .L809C9E38:
-/* 01078 809C9E38 0C0295B2 */  jal     func_800A56C8              
+/* 01078 809C9E38 0C0295B2 */  jal     SkelAnime_FrameTest              
 /* 0107C 809C9E3C 3C0542B4 */  lui     $a1, 0x42B4                ## $a1 = 42B40000
 /* 01080 809C9E40 10400002 */  beq     $v0, $zero, .L809C9E4C     
 /* 01084 809C9E44 24082820 */  addiu   $t0, $zero, 0x2820         ## $t0 = 00002820

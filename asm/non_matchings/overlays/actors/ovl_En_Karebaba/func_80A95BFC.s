@@ -14,11 +14,11 @@ glabel func_80A95BFC
               
 /* 008D8 80A95C28 AFA40020 */  sw      $a0, 0x0020($sp)           
 /* 008DC 80A95C2C 8FA40020 */  lw      $a0, 0x0020($sp)           
-/* 008E0 80A95C30 0C0295B2 */  jal     func_800A56C8              
+/* 008E0 80A95C30 0C0295B2 */  jal     SkelAnime_FrameTest              
 /* 008E4 80A95C34 24050000 */  addiu   $a1, $zero, 0x0000         ## $a1 = 00000000
 /* 008E8 80A95C38 14400004 */  bne     $v0, $zero, .L80A95C4C     
 /* 008EC 80A95C3C 8FA40020 */  lw      $a0, 0x0020($sp)           
-/* 008F0 80A95C40 0C0295B2 */  jal     func_800A56C8              
+/* 008F0 80A95C40 0C0295B2 */  jal     SkelAnime_FrameTest              
 /* 008F4 80A95C44 3C054140 */  lui     $a1, 0x4140                ## $a1 = 41400000
 /* 008F8 80A95C48 10400003 */  beq     $v0, $zero, .L80A95C58     
 .L80A95C4C:
