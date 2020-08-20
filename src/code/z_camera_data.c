@@ -790,8 +790,12 @@ CameraModeValue D_8011BB54[] = {
     { 5, 16 },  { 70, 17 }, { 45, 7 },  { 50, 8 },  { 10, 4 },  { 13728, 9 },
 };
 
+CameraModeValue valueSettings[] = {
+    { 40, 0 }, { 60, 7 }, { 3, 9 },
+};
+
 CameraMode D_8011BB84[] = {
-    { 2, 10, D_8011A3A0 },  { 7, 11, D_8011A3C8 }, { 12, 13, D_8011A3F4 }, { 14, 12, D_8011A428 },
+    { CAM_FUNC_RADIAL, 3, valueSettings },  { 7, 11, D_8011A3C8 }, { 12, 13, D_8011A3F4 }, { 14, 12, D_8011A428 },
     { 27, 12, D_8011A458 }, { 23, 9, D_8011A488 }, { 19, 9, D_8011A4AC },  { 19, 9, D_8011A4D0 },
     { 19, 9, D_8011A4F4 },  CAM_MODE_INIT(CAM_FUNC_SPEC5, D_8011A518), { 19, 9, D_8011A538 },  { 19, 9, D_8011A55C },
     { 23, 9, D_8011A580 },  { 22, 8, D_8011A5A4 }, CAM_MODE_INIT(CAM_FUNC_UNIQ1, D_8011A5C4),  CAM_MODE_INIT(CAM_FUNC_UNIQ1, D_8011A5E0),
@@ -800,7 +804,7 @@ CameraMode D_8011BB84[] = {
 };
 
 CameraMode D_8011BC2C[] = {
-    { 2, 10, D_8011A6C0 },  { 7, 11, D_8011A6E8 }, { 12, 13, D_8011A714 }, { 14, 12, D_8011A428 },
+    { CAM_FUNC_RADIAL, 3, valueSettings },  { 7, 11, D_8011A6E8 }, { 12, 13, D_8011A714 }, { 14, 12, D_8011A428 },
     { 27, 12, D_8011A748 }, { 23, 9, D_8011A7D8 }, { 19, 9, D_8011A4AC },  { 19, 9, D_8011A4D0 },
     { 19, 9, D_8011A4F4 },  CAM_MODE_INIT(CAM_FUNC_SPEC5, D_8011A778), { 19, 9, D_8011A538 },  { 19, 9, D_8011A55C },
     { 23, 9, D_8011A7FC },  { 22, 8, D_8011A798 }, CAM_MODE_INIT(CAM_FUNC_UNIQ1, D_8011A83C),  CAM_MODE_INIT(CAM_FUNC_UNIQ1, D_8011A858),
@@ -1303,6 +1307,7 @@ s32 Camera_Special6(Camera* camera);
 s32 Camera_Special7(Camera* camera);
 s32 Camera_Special8(Camera* camera);
 s32 Camera_Special9(Camera* camera);
+s32 Camera_CustomRadial(Camera* camera);
 
 typedef s32(*CameraFunc)(Camera*);
 CameraFunc sCameraFunctions[] = {
@@ -1377,6 +1382,7 @@ CameraFunc sCameraFunctions[] = {
     Camera_Special7,
     Camera_Special8,
     Camera_Special9,
+    Camera_CustomRadial,
 };
 
 s32 sInitRegs = 1; // 8011D390
@@ -1414,7 +1420,7 @@ char sCameraFunctionNames[][8] = {
     "DATA4()", "UNIQ0()", "UNIQ1()", "UNIQ2()", "UNIQ3()", "UNIQ4()", "UNIQ5()", "UNIQ6()", "UNIQ7()", "UNIQ8()",
     "UNIQ9()", "DEMO0()", "DEMO1()", "DEMO2()", "DEMO3()", "DEMO4()", "DEMO5()", "DEMO6()", "DEMO7()", "DEMO8()",
     "DEMO9()", "SPEC0()", "SPEC1()", "SPEC2()", "SPEC3()", "SPEC4()", "SPEC5()", "SPEC6()", "SPEC7()", "SPEC8()",
-    "SPEC9()", "",        "",        "",        "",        "",
+    "SPEC9()", "RADI1()",        "",        "",        "",        "",
 };
 
 VecSph D_8011D658[] = {

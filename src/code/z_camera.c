@@ -1340,6 +1340,76 @@ s32 Camera_NOP(Camera* camera) {
 }
 s16 func_80046B44(Camera*, s16, s16, s16);
 
+typedef struct {
+    f32 yOffset;
+    f32 fov;
+    VecSph radial;
+    s16 interfaceFlags;
+} CamRadial;
+
+s32 Camera_CustomRadial(Camera* camera){
+    f32 yOffset = Player_GetCameraYOffset(camera->player);
+    CamRadial* radial = (CamRadial*)&camera->params;
+    VecSph curEyeAt;
+    if(RELOAD_PARAMS){
+        CameraModeValue* values = sCameraSettings[camera->setting].cameraModes[camera->mode].values;
+        f32 yOffsetNormal = (1.0f - PCT(OREG(46))) - (PCT(OREG(46)) * (68.0f / yOffset));
+        radial->yOffset = NEXTPCT * yOffset * yOffsetNormal;
+        radial->fov = NEXTSETTING;
+        radial->radial.r = 200.0f;
+        radial->radial.yaw = BINANG_ROT180(camera->playerPosRot.rot.y);
+        radial->radial.pitch = 0x1000;
+        radial->interfaceFlags = NEXTSETTING;
+    }
+
+    if(R_RELOAD_CAM_PARAMS){
+        Camera_CopyPREGToModeValues(camera);
+    }
+
+    sUpdateCameraDirection = true;
+    sCameraInterfaceFlags = radial->interfaceFlags;
+
+    camera->at = camera->playerPosRot.pos;
+    camera->at.y += radial->yOffset;
+    OLib_Vec3fDiffToVecSphGeo(&curEyeAt, &camera->at, &camera->eyeNext);
+
+    switch(camera->animState){
+        case 0:
+        case 0xA:
+        case 0x14:
+            camera->animState++;
+            break;
+    }
+
+    if(CHECK_PAD(camera->globalCtx->state.input[0].cur, L_JPAD)){
+        radial->radial.yaw -= 0x300;
+    } else if (CHECK_PAD(camera->globalCtx->state.input[0].cur, R_JPAD)){
+        radial->radial.yaw += 0x300;
+    } else if (CHECK_PAD(camera->globalCtx->state.input[0].cur, D_JPAD | L_TRIG)){
+        radial->radial.r -= 5.0f;
+    } else if (CHECK_PAD(camera->globalCtx->state.input[0].cur, U_JPAD | L_TRIG)){
+        radial->radial.r += 5.0f;
+    } else if(CHECK_PAD(camera->globalCtx->state.input[0].cur, D_JPAD)){
+        radial->radial.pitch -= 0x100;
+    } else if(CHECK_PAD(camera->globalCtx->state.input[0].cur, U_JPAD)){
+        radial->radial.pitch += 0x100;
+    }
+    Camera_Vec3fVecSphGeoAdd(&camera->eyeNext, &camera->at, &radial->radial);
+    camera->eye = camera->eyeNext;
+
+    {
+        VecSph atEyeDir;
+        OLib_Vec3fDiffToVecSphGeo(&atEyeDir, &camera->eye, &camera->at);
+        camera->direction.x = atEyeDir.pitch;
+        camera->direction.y = atEyeDir.yaw;
+        camera->direction.z = 0;
+    }
+    camera->fov = Camera_LERPCeilF(radial->fov, camera->fov, camera->fovUpdateRate, 1.0f);
+    camera->roll = Camera_LERPCeilS(0, camera->roll, 0.5f, 0xA);
+    return 1;
+
+}
+
 //#define NON_MATCHING
 #ifdef NON_MATCHING
 s32 Camera_Normal1(Camera *camera) {
