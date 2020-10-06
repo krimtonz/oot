@@ -1,3 +1,9 @@
+.rdata
+glabel D_80812D28
+    .asciz "REGCK_ALL[%x]=%x,%x,%x,%x,%x,%x\n"
+    .balign 4
+
+.text
 glabel func_8080B52C
 /* 077EC 8080B52C 27BDFFB8 */  addiu   $sp, $sp, 0xFFB8           ## $sp = FFFFFFB8
 /* 077F0 8080B530 AFBF002C */  sw      $ra, 0x002C($sp)           

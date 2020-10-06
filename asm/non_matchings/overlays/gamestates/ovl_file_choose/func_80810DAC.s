@@ -1,3 +1,13 @@
+.rdata
+glabel D_80812F20
+    .asciz "../z_file_choose.c"
+    .balign 4
+
+glabel D_80812F34
+    .asciz "../z_file_choose.c"
+    .balign 4
+
+.text
 glabel func_80810DAC
 /* 0D06C 80810DAC 27BDFF68 */  addiu   $sp, $sp, 0xFF68           ## $sp = FFFFFF68
 /* 0D070 80810DB0 AFBF001C */  sw      $ra, 0x001C($sp)           
